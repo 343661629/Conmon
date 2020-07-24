@@ -1,2 +1,2 @@
-include ':app', ':ConmonModule', ':PerformanceLib'
+include ':app', ':ConmonModule', ':PerformanceLib', ':network'
 rootProject.name='ConmonModuleTest'
