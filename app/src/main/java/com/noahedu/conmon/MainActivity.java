@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.noahedu.conmon.http.NetModelConfig;
 import com.noahedu.conmon.mvvm.view.TestMVVMActivity;
+import com.noahedu.network.http.RequestResultCallBack;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +26,21 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }*/
 
-                Intent intent = new Intent(MainActivity.this, TestMVVMActivity.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(MainActivity.this, TestMVVMActivity.class);
+                startActivity(intent);*/
+
+                NetModelConfig.getInstance().test(new RequestResultCallBack() {
+                    @Override
+                    public void onRequestSuc(String type, String str) {
+                        Log.e("huangjisjnfsu","-------成功----------> " + str);
+                    }
+
+                    @Override
+                    public void onRequestErr(String type, String msg) {
+                        Log.e("huangjisjnfsu","--------失败---------> " + msg);
+                    }
+                });
+
             }
         });
     }

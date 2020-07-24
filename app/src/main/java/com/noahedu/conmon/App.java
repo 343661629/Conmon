@@ -2,6 +2,7 @@ package com.noahedu.conmon;
 
 import android.app.Application;
 
+import com.noahedu.network.http.RetrofitFactory;
 import com.noahedu.performancelib.blockcanary.InitBlockCanary;
 import com.noahedu.performancelib.leakcanary.InitLeakCanary;
 import com.noahedu.performancelib.watchdog.InitWatchDog;
@@ -23,7 +24,10 @@ public class App extends Application {
         /*InitBlockCanary.createInstance(this)
                 .setBlockThreshold(500)
                 .start();*/
-        InitLeakCanary.start(this);
+        /*InitLeakCanary.start(this);*/
+
+        RetrofitFactory.setContext(this);
+
     }
 
 

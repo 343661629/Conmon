@@ -5,10 +5,18 @@ android {
     resourcePrefix "${project.name.toLowerCase().replaceAll("-", "_")}_"
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
     defaultConfig {
         applicationId "com.noahedu.conmon"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -31,5 +39,6 @@ dependencies {
 
     implementation project(':ConmonModule')
     implementation project(':PerformanceLib')
+    implementation project(':NetWork')
 
 }
