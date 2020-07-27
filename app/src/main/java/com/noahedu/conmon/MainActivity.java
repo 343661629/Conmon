@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("huangjisjnfsu","--------失败---------> " + msg);
                     }
                 });
-
             }
         });
     }

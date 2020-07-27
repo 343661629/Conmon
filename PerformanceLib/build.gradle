@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
+    resourcePrefix "${project.name.toLowerCase().replaceAll("-", "_")}_"
+
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 

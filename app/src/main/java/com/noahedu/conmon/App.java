@@ -5,6 +5,7 @@ import android.app.Application;
 import com.noahedu.network.http.RetrofitFactory;
 import com.noahedu.performancelib.blockcanary.InitBlockCanary;
 import com.noahedu.performancelib.leakcanary.InitLeakCanary;
+import com.noahedu.performancelib.strictmode.InitStrictMode;
 import com.noahedu.performancelib.watchdog.InitWatchDog;
 
 /**
@@ -26,7 +27,8 @@ public class App extends Application {
                 .start();*/
         /*InitLeakCanary.start(this);*/
 
-        RetrofitFactory.setContext(this);
+        /*RetrofitFactory.setContext(this);*/
+        InitStrictMode.createStrictMode().start();
 
     }
 
