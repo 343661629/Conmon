@@ -35,6 +35,7 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation files('libs/klog.jar')
+    implementation 'com.tencent:mmkv-static:1.1.2'
 
 
 }

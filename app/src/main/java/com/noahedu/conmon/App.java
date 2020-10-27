@@ -2,6 +2,7 @@ package com.noahedu.conmon;
 
 import android.app.Application;
 
+import com.noahedu.conmonmodule.utils.MMKVUtils;
 import com.noahedu.network.http.RetrofitFactory;
 import com.noahedu.performancelib.blockcanary.InitBlockCanary;
 import com.noahedu.performancelib.leakcanary.InitLeakCanary;
@@ -28,7 +29,9 @@ public class App extends Application {
         /*InitLeakCanary.start(this);*/
 
         /*RetrofitFactory.setContext(this);*/
-        InitStrictMode.createStrictMode().start();
+//        InitStrictMode.createStrictMode().start();
+
+        MMKVUtils.sInitMMKV(this);
 
     }
 
